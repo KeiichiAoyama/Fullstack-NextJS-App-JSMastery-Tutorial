@@ -22,7 +22,7 @@ function Nav() {
    }, [])
 
    const handleClick = () => {
-    alert('click');
+    alert("click");
   };
 
   return (
@@ -65,12 +65,6 @@ function Nav() {
                 alt='profile'
               />
             </Link>
-
-            <button
-            type='button'
-            onClick={() => handleClick}>
-              Alert
-            </button>
           </div>
         ) : (
           <>
@@ -93,15 +87,18 @@ function Nav() {
       {/*Mobile Nav */}
       <div className='sm:hidden flex relative'>
         {isUserLoggedIn ? (
-          <div className='flex'> 
-            
-            <Image
+          <div className='flex'>
+            <button
+            type='button'
+            onClick={() => setToggleDropDown((prev) => !prev)}>
+              <Image
                 src={'assets/images/logo.svg'}
                 width={37}
                 height={37}
                 className='rounded-full'
                 alt='profile'
               />
+            </button>
             
               {toggleDropdown && (
                 <div className='dropdown'>
